@@ -10,29 +10,29 @@ import "../../assets/icon-80.png";
 
 /* global console, document, Excel, Office */
 
-// Office.onReady((info) => {
-//   if (info.host === Office.HostType.Excel) {
-//     document.getElementById("sideload-msg").style.display = "none";
-//     document.getElementById("app-body").style.display = "flex";
-//     document.getElementById("run").onclick = run;
-//   }
-// });
+Office.onReady((info) => {
+  if (info.host === Office.HostType.Excel) {
+    document.getElementById("sideload-msg").style.display = "none";
+    document.getElementById("app-body").style.display = "flex";
+    document.getElementById("run").onclick = run;
+  }
+});
 
-// export async function run() {
-//   try {
-//     await Excel.run(async (context) => {
-//       const range = context.workbook.getSelectedRange();
-//       range.format.fill.color = "yellow";
-//       range.load("address");
+export async function run() {
+  try {
+    await Excel.run(async (context) => {
+      const range = context.workbook.getSelectedRange();
+      range.format.fill.color = "yellow";
+      range.load("address");
 
-//       await context.sync();
+      await context.sync();
 
-//       console.log(`The range address was "${range.address}".`);
-//     });
-//   } catch (error) {
-//     console.error(error);
-//   }
-// }
+      console.log(`The range address was "${range.address}".`);
+    });
+  } catch (error) {
+    console.error(error);
+  }
+}
 
 Office.addin.setStartupBehavior(Office.StartupBehavior.load);
 
