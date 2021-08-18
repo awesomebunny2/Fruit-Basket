@@ -28,7 +28,7 @@
     <Hosts>
       <Host xsi:type="Workbook">
       <Runtimes>
-        <Runtime reside="Taskpane.Url" lifetime="long" />
+        <Runtime resid="Taskpane.Url" lifetime="long" />
       </Runtimes>
         <DesktopFormFactor>
           <GetStarted>
