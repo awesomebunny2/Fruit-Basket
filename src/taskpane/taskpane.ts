@@ -34,6 +34,8 @@ import "../../assets/icon-80.png";
 //   }
 // }
 
+Office.addin.setStartupBehavior(Office.StartupBehavior.load);
+
 
 Office.initialize = () => {
   Excel.run(async context => {
