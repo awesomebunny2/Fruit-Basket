@@ -13,20 +13,17 @@ Office.onReady(() => {
  * Shows a notification when the add-in command is executed.
  * @param event
  */
-function action(event: Office.AddinCommands.Event) {
-  const message: Office.NotificationMessageDetails = {
-    type: Office.MailboxEnums.ItemNotificationMessageType.InformationalMessage,
-    message: "Performed action.",
-    icon: "Icon.80x80",
-    persistent: true,
-  };
 
-  // Show a notification message
-  Office.context.mailbox.item.notificationMessages.replaceAsync("action", message);
+var _count = 0;
 
-  // Be sure to indicate when the add-in command function is complete
+function action(event) {
+  _count++;
+
+  Office.addin.showAsTaskpane();
+  document.getElementById("run").textContent="Go"+_count;
+
   event.completed();
-}
+  };
 
 function getGlobal() {
   return typeof self !== "undefined"
