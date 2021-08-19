@@ -60,10 +60,6 @@
                   <Action xsi:type="ExecuteFunction">
                     <FunctionName>action</FunctionName>
                   </Action>
-                  <Action xsi:type="ShowTaskpane">
-                    <TaskpaneId>Office.AutoShowTaskpaneWithDocument</TaskpaneId>
-                    <SourceLocation resid="Contoso.Taskpane.Url" />
-                  </Action>
                 </Control>
               </Group>
             </OfficeTab>

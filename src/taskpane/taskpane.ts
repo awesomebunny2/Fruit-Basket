@@ -15,8 +15,10 @@ import "../../assets/icon-80.png";
 
 Office.onReady((info) => {
   // Office.addin.showAsTaskpane();
-  Office.context.document.settings.set("Office.AutoShowTaskpaneWithDocument", true);
-  Office.context.document.settings.saveAsync();
+  Office.addin.setStartupBehavior(Office.StartupBehavior.load);
+
+  // Office.context.document.settings.set("Office.AutoShowTaskpaneWithDocument", true);
+  // Office.context.document.settings.saveAsync();
 
     if (info.host === Office.HostType.Excel) {
       document.getElementById("sideload-msg").style.display = "none";
