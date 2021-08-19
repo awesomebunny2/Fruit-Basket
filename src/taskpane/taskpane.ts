@@ -11,7 +11,8 @@ import "../../assets/icon-32.png";
 import "../../assets/icon-80.png";
 
 
-
+// Office.context.document.settings.set("Office.AutoShowTaskpaneWithDocument", true);
+// Office.context.document.settings.saveAsync();
 
 Office.onReady((info) => {
   // Office.addin.showAsTaskpane();
